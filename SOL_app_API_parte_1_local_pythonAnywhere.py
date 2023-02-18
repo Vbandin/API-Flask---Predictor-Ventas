@@ -8,8 +8,8 @@ import numpy as np
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-root = '/home/vbandin/modelo_clase/'
-root_db = '/home/vbandin/databases/'
+root = '/home/vbandin/API-Flask---Predictor-Ventas/modelo_clase/'
+root_db = '/home/vbandin/API-Flask---Predictor-Ventas/databases/'
 model = pickle.load(open(root + 'advertising.model', 'rb'))
 print(model.coef_)
 
