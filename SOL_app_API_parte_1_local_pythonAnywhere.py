@@ -46,7 +46,7 @@ def get_predict():
                     VALUES(?,?,?,?,?) ''', (str_time, tv, radio, newspaper, pred))
     conn.commit()
     conn.close()
-    return 'Con valores %.1f %.1f %.1f: %.3f' %(TV, radio, newspaper, pred), 200
+    return 'Con valores %.1f %.1f %.1f: %.3f' %(str(tv), str(radio), str(newspaper), str(pred)), 200
 
 @app.route('/review_predicts', methods=['GET'])
 def return_predicts():
